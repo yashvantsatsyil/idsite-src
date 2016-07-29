@@ -58,7 +58,12 @@
 
     <div class="container" ng-controller="ErrorCtrl" ng-cloak>
       <div class="logo-container">
-        <img ng-show="logoUrl" class="logo img-responsive" ng-src="{{logoUrl}}"/>
+        <div class="navbar-header">
+          <a class="navbar-brand" style="color: rgb(51, 224, 255);">
+            <img ng-show="logoUrl" class="logo img-responsive ng-hide" ng-src="">
+            <img src="http://nextgen-dev.binaryfountain.com:8080/logo.png" class="img-responsive" alt="binary fountain">
+          </a>
+        </div>
       </div>
       <div ng-show="inError" ng-include="'views/error.html'"></div>
       <div ng-hide="inError" ng-view="">
